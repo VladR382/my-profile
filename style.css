@@ -1,0 +1,318 @@
+/* Base styles (mostly unchanged) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+    position: relative;
+}
+
+/* Navigation */
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    background: #FFFFFF;
+    z-index: 1000;
+    border-bottom: 1px solid #8b1717;
+}
+
+.logo a {
+    font-size: 2rem;
+    font-weight: 800;
+    font-family: courier;
+    color: maroon;
+}
+
+.menu {
+    display: flex;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+nav ul li a {
+    color: black;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Hamburger menu for mobile */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Hero section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url('Assets/2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero .content {
+    padding: 1.4rem 7%;
+    width: 100%;
+    text-align: center;
+}
+
+.hero .content h1 {
+    font-size: 3em;
+    color: maroon;
+    text-shadow: 1px 1px 3px rgba(238, 238, 243, 0.544);
+    line-height: 1.2;
+}
+
+.hero .content p {
+    font-size: 1.2rem;
+    color: #000000;
+    margin-top: 1rem;
+    line-height: 1.4;
+    text-shadow: 1px 1px 2px rgb(255, 0, 0);
+}
+
+.hero .content .cta {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.2rem;
+    color: white;
+    background-color: black;
+    border-radius: 0.5rem;
+}
+
+/* About section */
+.about {
+    padding: 4rem 7% 1.4rem;
+}
+
+.about h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+}
+
+.about .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.about .row .about-img {
+    flex: 1 1 300px;
+    max-width: 100%;
+}
+
+.about .row .about-img img {
+    width: 100%;
+    border-radius: 30%;
+}
+
+.about .row .content {
+    flex: 1 1 300px;
+}
+
+.about .row .content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.about .row .content p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    font-weight: 100;
+    margin-top: 40px;
+    padding-top: 50px;
+}
+
+/* Contact section */
+.contact {
+    padding: 4rem 7% 1.4rem;
+}
+
+.contact h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+}
+
+.contact p {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.contact .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.contact .row form {
+    flex: 1 1 300px;
+    max-width: 100%;
+}
+
+.contact .row form .input-grup {
+    margin-bottom: 1rem;
+}
+
+.contact .row form .input-grup input {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    background: maroon;
+    color: white;
+    border: none;
+}
+
+.contact .row form .btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    color: white;
+    background-color: maroon;
+    cursor: pointer;
+    border: none;
+}
+
+/* Footer */
+footer {
+    background-color: maroon;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+footer .links {
+    margin-bottom: 1rem;
+}
+
+footer .links a {
+    color: #fff;
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+footer .credit {
+    font-size: 0.8rem;
+    color: #fff;
+}
+
+footer .credit a {
+    color: #fff;
+    font-weight: 700;
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .menu {
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background: #fff;
+        flex-direction: column;
+        align-items: center;
+        transition: all 0.3s ease;
+    }
+
+    .menu.active {
+        right: 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li a {
+        padding: 1rem;
+        display: block;
+    }
+
+    .hero .content h1 {
+        font-size: 2.5em;
+    }
+
+    .hero .content p {
+        font-size: 1rem;
+    }
+
+    .about h2, .contact h2 {
+        font-size: 2rem;
+    }
+
+    .about .row .content h3 {
+        font-size: 1.3rem;
+    }
+
+    .about .row .content p, .contact p {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero .content h1 {
+        font-size: 2em;
+    }
+
+    .hero .content .cta {
+        font-size: 1rem;
+        padding: 0.6rem 1.2rem;
+    }
+
+    .about h2, .contact h2 {
+        font-size: 1.8rem;
+    }
+}
