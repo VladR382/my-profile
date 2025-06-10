@@ -1,4 +1,3 @@
-Berikut adalah contoh `README.md` yang bisa Anda gunakan untuk repositori proyek ini.
 
 -----
 
